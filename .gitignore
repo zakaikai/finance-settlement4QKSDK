@@ -1,0 +1,88 @@
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+dist/
+build/
+*.spec
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.pytest_cache/
+
+# ── Virtual Environment ──
+.venv/
+venv/
+env/
+
+# ── Environment & Secrets ──
+.env
+config.env
+*.key
+*.pem
+*.cert
+ssl/
+
+# ── Node.js ──
+node_modules/
+frontend/node_modules/
+
+# ── Frontend Build ──
+frontend/dist/
+
+# ── Backend Build ──
+*.zip
+*.tar.gz
+
+# ── Logs ──
+*.log
+
+# ── Database ──
+data/settlement.db
+data/settlement.db-wal
+data/settlement.db-shm
+data/backups/
+
+# ── IDE / Editor ──
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# ── Tools (keep scripts, exclude binaries) ──
+tools/sqlitebrowser/
+tools/*.zip
+
+# ── Temp / Scratch Files ──
+tmp/
+.tmp/
+scratch/
+*.bak
+*.orig
+
+# ── PyInstaller ──
+_backup/
+
+# ── Agent / AI Tools ──
+.claude/
+.agents/
+.continue/
+skills-lock.json
+
+# ── Documentation build ──
+site/
+_build/

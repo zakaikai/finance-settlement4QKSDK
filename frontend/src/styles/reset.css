@@ -1,0 +1,181 @@
+/* ═══════════════════════════════════════════════════════
+   Global Reset & Base — 财务结算系统
+   Extracted from index.html + App.vue non‑scoped styles
+   ═══════════════════════════════════════════════════════ */
+
+@import './variables.css';
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  min-width: var(--min-width);
+}
+
+#app { min-height: 100vh; }
+
+/* ── App shell ────────────────────────────────── */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: linear-gradient(135deg, var(--bg-header-start) 0%, var(--bg-header-end) 100%);
+  color: var(--text-on-primary);
+  padding: 0 var(--space-2xl);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xl);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+.brand-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.app-header h1 {
+  font-size: 17px;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.5px;
+}
+
+.app-header nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  height: 100%;
+}
+
+.app-header nav a {
+  color: var(--text-nav);
+  text-decoration: none;
+  font-size: 13.5px;
+  padding: 0 14px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 3px solid transparent;
+  transition: color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.app-header nav a:hover {
+  color: var(--text-nav-hover);
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom-color: rgba(100, 255, 218, 0.4);
+}
+
+.app-header nav a.router-link-active {
+  color: var(--text-on-primary);
+  border-bottom-color: var(--color-accent);
+}
+
+.nav-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+.btn-expand {
+  padding: 4px 10px;
+}
+
+.header-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  height: 100%;
+}
+
+.btn-header {
+  color: var(--text-nav);
+  text-decoration: none;
+  font-size: var(--text-base);
+  padding: 6px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--text-nav);
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.btn-header:hover {
+  color: var(--text-on-primary);
+  border-color: var(--text-on-primary);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.btn-logout:hover { color: #f87171; border-color: #f87171; }
+
+.app-main {
+  padding: var(--space-2xl);
+  flex: 1;
+  max-width: var(--content-max-width);
+  width: 100%;
+  margin: 0 auto;
+  transition: max-width 0.2s;
+}
+
+.expanded .app-main { max-width: 100%; }
+
+/* ── Shared card panel ────────────────────────── */
+.card-panel {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-card);
+}
+
+/* ── Page titles ──────────────────────────────── */
+h2.page-title {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+/* ── Login ────────────────────────────────────── */
+.login-wrapper { min-height: 100vh; }
+
+/* ── Read‑only banner ─────────────────────────── */
+.readonly-banner {
+  background: #fff3cd;
+  color: #856404;
+  text-align: center;
+  font-size: var(--text-base);
+  padding: 6px;
+  border-bottom: 1px solid #ffc107;
+}

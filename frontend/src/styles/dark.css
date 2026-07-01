@@ -1,0 +1,140 @@
+/* ═══════════════════════════════════════════════════════
+   Dark Mode Overrides — 财务结算系统
+   Toggle: document.documentElement.classList.toggle('dark')
+   ═══════════════════════════════════════════════════════ */
+
+:root.dark {
+  /* ── Backgrounds ────────────────────────────── */
+  --bg-page:            #0d1114;
+  --bg-card:            #161b22;
+  --bg-header-start:    #0d1114;
+  --bg-header-end:      #111820;
+  --bg-input-focus:     rgba(64, 169, 255, 0.12);
+  --bg-modal-overlay:   rgba(0, 0, 0, 0.65);
+
+  --bg-row-alt:         #1a2030;
+  --bg-row-warn:        #2d2416;
+  --bg-row-danger:      #2d181a;
+  --bg-row-yellow:      #252a16;
+  --bg-row-changed:     #22241c;
+  --bg-deduction-bar:   #2d2814;
+  --bg-badge-ok:        #1a3020;
+  --bg-badge-warn:      #2d2814;
+  --bg-badge-error:     #2d181a;
+  --bg-tag-green:       #1a3020;
+  --bg-tag-yellow:      #2d2814;
+  --bg-tag-blue:        #1a2435;
+
+  /* ── Text ───────────────────────────────────── */
+  --text-primary:       #e6edf3;
+  --text-secondary:     #b3bac5;
+  --text-muted:         #8b949e;
+  --text-light:         #6e7681;
+  --text-nav:           #8b949e;
+  --text-nav-hover:     #d0d7e0;
+  --text-on-primary:    #ffffff;
+
+  /* ── Brand / Primary — brighten for dark bg ── */
+  --color-primary:      #4a63cc;
+  --color-primary-dark: #5d75db;
+  --color-accent:       #4de6c5;
+
+  /* ── Semantic ───────────────────────────────── */
+  --color-success:      #3fb950;
+  --color-danger:       #f85149;
+  --color-warning:      #d29922;
+  --color-info:         #58a6ff;
+
+  /* ── Borders ────────────────────────────────── */
+  --border-default:     #30363d;
+  --border-light:       #21262d;
+  --border-cell:        #21262d;
+  --border-header-cell: #30363d;
+  --border-deduction:   #5c4a10;
+  --border-dashed:      #30363d;
+  --border-input-focus: #58a6ff;
+
+  /* ── Shadows ────────────────────────────────── */
+  --shadow-card:        0 1px 4px rgba(0, 0, 0, 0.4);
+  --shadow-elevated:    0 4px 16px rgba(0, 0, 0, 0.5);
+
+  /* ── Palette ────────────────────────────────── */
+  --palette-gray-50:    #1a2030;
+  --palette-gray-80:    #1c2435;
+  --palette-gray-100:   #1a2030;
+  --palette-gray-150:   #0d1114;
+  --palette-gray-200:   #21262d;
+  --palette-gray-250:   #30363d;
+  --palette-gray-300:   #30363d;
+  --palette-gray-400:   #30363d;
+  --palette-gray-500:   #8b949e;
+  --palette-gray-600:   #6e7681;
+  --palette-gray-700:   #8b949e;
+  --palette-gray-800:   #b3bac5;
+  --palette-white:      #161b22;
+  --palette-blue-dark:  #5d75db;
+
+  /* ── AG Grid — base primitives (derives ~40 vars via color-mix) ── */
+  --ag-background-color:              var(--bg-card);
+  --ag-foreground-color:              var(--text-primary);
+  --ag-active-color:                  var(--color-info);
+  --ag-invalid-color:                 var(--color-danger);
+
+  /* ── AG Grid — explicit overrides ─────────────── */
+  --ag-secondary-foreground-color:    var(--text-secondary);
+  --ag-disabled-foreground-color:     var(--text-light);
+  --ag-header-foreground-color:       var(--text-primary);
+  --ag-header-background-color:       #1a2235;
+  --ag-odd-row-background-color:      rgba(255, 255, 255, 0.02);
+  --ag-border-color:                  var(--border-default);
+  --ag-secondary-border-color:        var(--border-light);
+  --ag-input-border-color:            var(--border-default);
+  --ag-input-focus-border-color:      var(--color-info);
+  --ag-input-disabled-border-color:   var(--border-light);
+  --ag-input-disabled-background-color: rgba(255, 255, 255, 0.03);
+  --ag-icon-font-color:               var(--text-muted);
+  --ag-range-selection-border-color:  var(--color-info);
+  --ag-checkbox-background-color:     var(--bg-card);
+  --ag-checkbox-checked-color:        var(--color-info);
+  --ag-checkbox-unchecked-color:      var(--text-light);
+  --ag-tooltip-background-color:      #1c2435;
+  --ag-menu-background-color:         #1c2435;
+  --ag-panel-background-color:        #1c2435;
+  --ag-control-panel-background-color: #1c2435;
+  --ag-modal-overlay-background-color: rgba(0, 0, 0, 0.6);
+  --ag-chip-background-color:         rgba(255, 255, 255, 0.04);
+  --ag-chip-border-color:             var(--border-default);
+  --ag-chart-menu-label-color:        var(--text-secondary);
+  --ag-chart-menu-pill-select-button-color: var(--text-muted);
+}
+
+/* ── AG Grid — high-specificity override for Quartz ── */
+.dark .ag-theme-quartz {
+  --ag-background-color:              var(--bg-card);
+  --ag-foreground-color:              var(--text-primary);
+  --ag-active-color:                  var(--color-info);
+  --ag-invalid-color:                 var(--color-danger);
+  --ag-secondary-foreground-color:    var(--text-secondary);
+  --ag-disabled-foreground-color:     var(--text-light);
+  --ag-header-foreground-color:       var(--text-primary);
+  --ag-header-background-color:       #1a2235;
+  --ag-odd-row-background-color:      rgba(255, 255, 255, 0.02);
+  --ag-border-color:                  var(--border-default);
+  --ag-secondary-border-color:        var(--border-light);
+  --ag-input-border-color:            var(--border-default);
+  --ag-input-focus-border-color:      var(--color-info);
+  --ag-input-disabled-border-color:   var(--border-light);
+  --ag-input-disabled-background-color: rgba(255, 255, 255, 0.03);
+  --ag-icon-font-color:               var(--text-muted);
+  --ag-range-selection-border-color:  var(--color-info);
+  --ag-checkbox-background-color:     var(--bg-card);
+  --ag-checkbox-checked-color:        var(--color-info);
+  --ag-checkbox-unchecked-color:      var(--text-light);
+  --ag-tooltip-background-color:      #1c2435;
+  --ag-menu-background-color:         #1c2435;
+  --ag-panel-background-color:        #1c2435;
+  --ag-control-panel-background-color: #1c2435;
+  --ag-modal-overlay-background-color: rgba(0, 0, 0, 0.6);
+  --ag-chip-background-color:         rgba(255, 255, 255, 0.04);
+  --ag-chip-border-color:             var(--border-default);
+}

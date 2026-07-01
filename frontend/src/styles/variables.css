@@ -1,0 +1,118 @@
+/* ═══════════════════════════════════════════════════════
+   Design Tokens — 财务结算系统
+   Three-layer: raw palette → semantic → sizing/type/shadow
+   ═══════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Raw palette ────────────────────────────── */
+  --palette-navy:       #1a1a2e;
+  --palette-navy-dark:  #16213e;
+  --palette-teal:       #64ffda;
+  --palette-green:      #27ae60;
+  --palette-red:        #e74c3c;
+  --palette-orange:     #e67e22;
+  --palette-blue:       #1890ff;
+  --palette-blue-dark:  #2563eb;
+
+  --palette-gray-50:    #fafafa;
+  --palette-gray-80:    #f9fafb;
+  --palette-gray-100:   #f8f9fa;
+  --palette-gray-150:   #f0f2f5;
+  --palette-gray-200:   #e5e7eb;
+  --palette-gray-250:   #e0e0e0;
+  --palette-gray-300:   #d9d9d9;
+  --palette-gray-400:   #d0d5dd;
+  --palette-gray-500:   #a0a0b8;
+  --palette-gray-600:   #999;
+  --palette-gray-700:   #888;
+  --palette-gray-800:   #555;
+  --palette-white:      #ffffff;
+
+  /* ── Semantic colors ────────────────────────── */
+  --color-primary:      var(--palette-navy);
+  --color-primary-dark: var(--palette-navy-dark);
+  --color-accent:       var(--palette-teal);
+  --color-success:      var(--palette-green);
+  --color-danger:       var(--palette-red);
+  --color-warning:      var(--palette-orange);
+  --color-info:         var(--palette-blue);
+
+  --bg-page:            var(--palette-gray-150);
+  --bg-card:            var(--palette-white);
+  --bg-header-start:    var(--palette-navy);
+  --bg-header-end:      var(--palette-navy-dark);
+  --bg-input-focus:     #e6f7ff;
+  --bg-row-alt:         var(--palette-gray-100);
+  --bg-row-warn:        #fff4e5;
+  --bg-row-danger:      #fff0f0;
+  --bg-row-yellow:      #fefff0;
+  --bg-row-changed:     #fffdf0;
+  --bg-deduction-bar:   #fff8e1;
+  --bg-badge-ok:        #e8f5e9;
+  --bg-badge-warn:      #fff3e0;
+  --bg-badge-error:     #fee2e2;
+  --bg-tag-green:       #d1fae5;
+  --bg-tag-yellow:      #fef3c7;
+  --bg-tag-blue:        #e8f0fe;
+  --bg-modal-overlay:   rgba(0, 0, 0, 0.4);
+
+  --text-primary:       var(--palette-navy);
+  --text-secondary:     var(--palette-gray-800);
+  --text-muted:         var(--palette-gray-700);
+  --text-light:         var(--palette-gray-600);
+  --text-nav:           var(--palette-gray-500);
+  --text-nav-hover:     #e0e0f0;
+  --text-on-primary:    var(--palette-white);
+
+  --border-default:     var(--palette-gray-400);
+  --border-light:       var(--palette-gray-200);
+  --border-cell:        #f0f0f0;
+  --border-header-cell: var(--palette-gray-250);
+  --border-deduction:   #ffe082;
+  --border-dashed:      var(--palette-gray-300);
+  --border-input-focus: var(--palette-navy);
+
+  /* ── Spacing scale ──────────────────────────── */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  12px;
+  --space-lg:  16px;
+  --space-xl:  24px;
+  --space-2xl: 28px;
+  --space-3xl: 32px;
+
+  /* ── Radii ──────────────────────────────────── */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  /* ── Type scale ─────────────────────────────── */
+  --text-xs:   11px;
+  --text-sm:   12px;
+  --text-base: 13px;
+  --text-md:   14px;
+  --text-lg:   16px;
+  --text-xl:   18px;
+  --text-2xl:  20px;
+  --text-3xl:  22px;
+
+  --leading-tight:  1.25;
+  --leading-normal: 1.5;
+
+  --weight-normal:  400;
+  --weight-medium:  500;
+  --weight-semibold: 600;
+  --weight-bold:    700;
+
+  /* ── Shadows ────────────────────────────────── */
+  --shadow-card:     0 1px 4px rgba(0, 0, 0, 0.06);
+  --shadow-elevated: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+  /* ── Layout ─────────────────────────────────── */
+  --header-height:    56px;
+  --content-max-width: 1400px;
+  --min-width:        1024px;
+
+  /* ── Transition ─────────────────────────────── */
+  --transition-fast: 0.15s ease;
+}
