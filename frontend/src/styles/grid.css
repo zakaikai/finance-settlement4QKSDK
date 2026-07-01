@@ -1,0 +1,50 @@
+/* ═══════════════════════════════════════════════════════
+   AG Grid Shared Overrides — 财务结算系统
+   ═══════════════════════════════════════════════════════ */
+
+/* Row number column */
+.ag-theme-quartz .row-number {
+  color: var(--text-light);
+  text-align: center;
+}
+
+/* Negative value cells */
+.ag-theme-quartz .cell-negative {
+  color: var(--color-danger) !important;
+  font-weight: var(--weight-semibold);
+}
+
+/* Locked cell indicator */
+.ag-theme-quartz .cell-locked {
+  border-left: 4px solid var(--color-info);
+}
+
+/* Cell borders */
+.ag-theme-quartz .ag-cell {
+  border-right: 1px solid var(--border-cell);
+}
+
+.ag-theme-quartz .ag-header-cell {
+  border-right: 1px solid var(--border-header-cell);
+  font-weight: var(--weight-semibold);
+}
+
+/* Header background */
+.ag-theme-quartz .ag-header {
+  background: var(--palette-gray-50);
+}
+
+/* Alternating row */
+.ag-theme-quartz .ag-row-even {
+  background: var(--bg-row-alt);
+}
+
+/* Delete row button cell renderer fallback */
+.ag-theme-quartz .btn-del-row {
+  color: var(--color-danger);
+  cursor: pointer;
+  font-size: var(--text-sm);
+  background: none;
+  border: none;
+  padding: 2px 6px;
+}

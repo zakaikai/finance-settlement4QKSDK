@@ -1,0 +1,14 @@
+/* ═══════════════════════════════════════════════════════
+   Card Utilities — 财务结算系统
+   WIP: incomplete, subject to future adjustments per business needs
+   ═══════════════════════════════════════════════════════ */
+
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.card-padded  { padding: var(--space-xl); }
+.card-compact { padding: var(--space-lg); }
+.card-elevated { box-shadow: var(--shadow-elevated); }

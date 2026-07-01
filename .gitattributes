@@ -1,0 +1,15 @@
+# Auto-detect text files and use LF on checkout
+* text=auto
+
+# Batch files should stay CRLF on Windows
+*.bat text eol=crlf
+
+# Shell scripts should stay LF
+*.sh text eol=lf
+
+# Binary files
+*.xlsx binary
+*.db binary
+*.png binary
+*.jpg binary
+*.ico binary
